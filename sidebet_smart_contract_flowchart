@@ -1,0 +1,41 @@
+digraph {
+	A [label="User A
+(createBet)" shape=box]
+	B [label="Lock
+(createBet)" shape=box]
+	C [label="Lock
+(betInfos, betStatuses)" shape=box]
+	D [label="User B
+(acceptBet)" shape=box]
+	E [label="Lock
+(acceptBet)" shape=box]
+	F [label="Lock
+(areWithinRange)" shape=box]
+	G [label="Lock
+(BetAccepted)" shape=box]
+	H [label="Lock
+(resolveBet)" shape=box]
+	I [label="Lock
+(payout)" shape=box]
+	J [label="Lock
+(BetResolved)" shape=box]
+	K [label="Lock
+(updateCreator)" shape=box]
+	L [label="Lock
+(transferFunds)" shape=box]
+	M [label="SideBet
+(transferFunds)" shape=box]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G [label=true]
+	F -> G [label=false]
+	G -> H
+	H -> I
+	I -> J
+	J -> K
+	K -> L
+	L -> M
+}

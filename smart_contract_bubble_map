@@ -1,0 +1,52 @@
+digraph {
+	Lock [label="Smart Contract
+Lock" color=lightblue shape=box style=filled]
+	ERC721 [label="Smart Contract
+ERC721" color=lightblue shape=box style=filled]
+	Counters [label="Library
+Counters" color=lightblue shape=box style=filled]
+	SafeMath [label="Library
+SafeMath" color=lightblue shape=box style=filled]
+	BetMarketplace [label="Smart Contract
+Bet Marketplace" color=lightblue shape=box style=filled]
+	Listing [label="Struct
+Listing" color=lightblue shape=box style=filled]
+	betContract [label="Address
+betContract" color=lightblue shape=box style=filled]
+	tokenIds [label="Array
+tokenIds" color=lightblue shape=box style=filled]
+	listings [label="Mapping
+listings" color=lightblue shape=box style=filled]
+	ListingCreated [label="Event
+ListingCreated" color=lightblue shape=box style=filled]
+	ListingCancelled [label="Event
+ListingCancelled" color=lightblue shape=box style=filled]
+	ListingSold [label="Event
+ListingSold" color=lightblue shape=box style=filled]
+	createListing [label="Function
+createListing" color=lightblue shape=box style=filled]
+	cancelListing [label="Function
+cancelListing" color=lightblue shape=box style=filled]
+	buyListing [label="Function
+buyListing" color=lightblue shape=box style=filled]
+	getListing [label="Function
+getListing" color=lightblue shape=box style=filled]
+	getAllListings [label="Function
+getAllListings" color=lightblue shape=box style=filled]
+	Lock -> ERC721
+	Lock -> Counters
+	Lock -> SafeMath
+	Lock -> BetMarketplace
+	BetMarketplace -> Lock
+	BetMarketplace -> Listing
+	BetMarketplace -> tokenIds
+	BetMarketplace -> listings
+	BetMarketplace -> ListingCreated
+	BetMarketplace -> ListingCancelled
+	BetMarketplace -> ListingSold
+	BetMarketplace -> createListing
+	BetMarketplace -> cancelListing
+	BetMarketplace -> buyListing
+	BetMarketplace -> getListing
+	BetMarketplace -> getAllListings
+}
